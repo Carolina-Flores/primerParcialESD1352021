@@ -21,7 +21,7 @@ int datos [59][6];
 int transponer_datos [6][59];
 int producto[FILAS_MATRIZ_A][COLUMNAS_MATRIZ_B];
 
-void leer_archivo_csv(char ubicacion[73]) {
+void leer_archivo_csv(char ubicacion[34]) {
     FILE *archivo = NULL;
     archivo = fopen(ubicacion, "r");
     if (archivo != NULL) {
@@ -59,7 +59,6 @@ void generar_matriz() {
     }
     return;
 }
-
 void transponer_matrices() {
     for (int filas = 0; filas < lineas - 2; filas++) {
         for (int columnas = 0; columnas < 6; columnas++) {
@@ -92,11 +91,10 @@ const char* integrantes() {
 }
 
 int main(int argc, char** argv) {
-    leer_archivo_csv("C:\\Users\\Carito Flores\\Downloads\\DATOS\\peliculasFavoritasESD135_2021.csv");
+    leer_archivo_csv("peliculasFavoritasESD135_2021.csv");
     generar_matriz();
     transponer_matrices();
     multiplicar_matrices();
     integrantes();
     return (EXIT_SUCCESS);
 }
-
