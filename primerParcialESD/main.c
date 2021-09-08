@@ -45,9 +45,7 @@ void leer_archivo_csv(char ubicacion[34]) {
             campos_por_linea[lineas - 1] = campos;
         } while (feof(archivo) == 0);
         fclose(archivo);
-    } else {
-        printf("Error leyendo el archivo\n");
-    }
+    } 
     return;
 }
 
