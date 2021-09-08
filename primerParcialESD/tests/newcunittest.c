@@ -21,10 +21,10 @@ int clean_suite(void) {
     return 0;
 }
 
-void leer_archivo_csv(char ubicacion[]);
+void leer_archivo_csv(char ubicacion);
 
 void testLeer_archivo_csv() {
-    char* ubicacion;
+    char* ubicacion = "peliculasFavoritasESD135_2021.csv";
     leer_archivo_csv(ubicacion);
     if (1 /*check result*/) {
         CU_ASSERT(1);
